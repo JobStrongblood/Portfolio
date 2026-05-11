@@ -205,10 +205,10 @@ virus = "*"
 
 os.system("clear")
 print(f"\nBoards 1-3 and the r-pentomino board have no virus attributes.")
-board_selection = input(f"\nWhat board would you like to use? Please enter the file name OR number as a word (e.g. 'two', 'three'), excluding removing '.txt  ")
-grid, num_rows, num_cols = read_from_file(f"{board_selection}.txt")
+board_selection = input(f"\nWhat board would you like to use? Please enter the file name OR number as a word (e.g. 'two', 'three'), and remove the '.txt  ")
+grid, num_rows, num_cols = read_from_file(f"cellular_automata/{board_selection}.txt")
 gen_num = int(input(f"How many generations do you want to run this for? (enter an integer)"))
-print_grid(grid, 1, alive, virus)StopIteration
+print_grid(grid, 1, alive, virus)
 
 for generation in range(0, gen_num):
     generation_global = int(generation) + 1 #+1 is needed because the range starts at zero, but logicaly we count 1 first.

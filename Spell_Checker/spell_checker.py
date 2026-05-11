@@ -14,7 +14,7 @@ Albeit, I send you off, without further ado; have fun!
 
 
 ######### reads the word list file & adds it to a list variable, "word_list"   #########
-file = open("word_list.txt", "r")
+file = open("Spell_Checker/word_list.txt", "r")
 
 
 word_list = [] #creates the list variable
@@ -94,20 +94,20 @@ while not exit_loop_2 and suggested_word != user_word: #this is while loop 2
                     ##########    block for adding to dictionary     ############ 
                     if add_to_dictionary == "y":
                         print(f"aiight, {user_word} is now in the dictionary.\nAnything else you need, feel free to run the program again!") 
-                        file = open("word_list.txt", "w") #opens the file in write mode
+                        file = open("Spell_Checker/word_list.txt", "w") #opens the file in write mode
                         for word in word_list:
                             file.write(f'{word}\n') #writes in all the words in our list
                         file.write(f'{user_word}\n') #allllso writes in our new word
                         file.close() #closes file
 
                         #####  now we sort the text list
-                        file = open("word_list.txt", "r") #opens file in read mode
+                        file = open("Spell_Checker/word_list.txt", "r") #opens file in read mode
                         lines = file.readlines() #finds list of lines
                         file.close() #close file
 
                         lines.sort() #sorts said lines
 
-                        file = open("word_list.txt", "w") #opens again in write mode
+                        file = open("Spell_Checker/word_list.txt", "w") #opens again in write mode
                         file.writelines(lines) #writes aforementioned lines to the file
                         file.close() #close file
                         exit_loop_2 = True #breaks out of second loop, ending program

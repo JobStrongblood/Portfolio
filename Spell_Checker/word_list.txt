@@ -1,4 +1,5 @@
 anchor
+ape
 apple
 astronaut
 avocado
@@ -63,6 +64,7 @@ nebula
 needle
 no
 notebook
+now
 ocean
 orange
 orbit

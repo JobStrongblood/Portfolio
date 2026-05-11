@@ -48,7 +48,7 @@ Parameter: NA
 Return Value: secret_word, the above mentioned random word
 '''
 def rand_sel():
-    words = read_words("word_list.txt")
+    words = read_words("Hangman/word_list.txt")
     secret_word = random.choice(words)
     #print(secret_word) #for debugging only -- reveals the answer
     return secret_word
